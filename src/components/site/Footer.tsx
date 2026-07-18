@@ -46,9 +46,9 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-energy">{t("footer.contact")}</h4>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
-            <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0" /> +254 700 000 000</li>
+            <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0" /> +254 741 229 960</li>
             <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0" /> info@taksanenergy.com</li>
-            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0" /> Nairobi, Kenya · Kinshasa, DRC · Maputo, Mozambique</li>
+            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0" /> Marurui, Thome P.O.Box 10436-00100</li>
           </ul>
         </div>
       </div>

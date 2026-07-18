@@ -1,0 +1,1 @@
+var e=`/assets/tanker-truck-Di45EkyA.jpg`;export{e as t};

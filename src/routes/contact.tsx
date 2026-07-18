@@ -77,7 +77,7 @@ function ContactPage() {
           <div className="rounded-2xl gradient-brand p-6 text-white">
             <h3 className="text-lg font-bold">{t("contact.info")}</h3>
             <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5" /> +254 700 000 000</li>
+              <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5" /> +254 741 229 960</li>
               <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5" /> info@taksanenergy.com</li>
               <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5" /> Head Office: Nairobi, Kenya</li>
             </ul>
