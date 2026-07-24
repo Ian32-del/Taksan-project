@@ -31,7 +31,7 @@ function Index() {
           <p className="mt-6 max-w-2xl text-lg text-white/85">{t("hero.sub")}</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-energy px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-energy/30 hover:-translate-y-0.5 transition-transform">
-              {t("cta.contact")} <ArrowRight className="h-4 w-4" />
+              {t("cta.contact")} 
             </Link>
             <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 backdrop-blur px-6 py-3 text-sm font-semibold text-white hover:bg-white/15">
               {t("cta.explore")}
@@ -42,11 +42,24 @@ function Index() {
 
       {/* Stats */}
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-x grid grid-cols-2 md:grid-cols-4 gap-8 py-14">
-          <AnimatedStat value={15} suffix="+" label={t("stats.years")} />
-          <AnimatedStat value={3} label={t("stats.countries")} />
-          <AnimatedStat value={5000} suffix="+" label={t("stats.deliveries")} />
-          <AnimatedStat value={200} suffix="+" label={t("stats.clients")} />
+        <div className="container-x grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-16">
+
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">
+            <AnimatedStat value={15} suffix="+" label={t("stats.years")} />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">
+            <AnimatedStat value={3} label={t("stats.countries")} />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">
+            <AnimatedStat value={5000} suffix="+" label={t("stats.deliveries")} />
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">
+            <AnimatedStat value={200} suffix="+" label={t("stats.clients")} />
+          </div>
+
         </div>
       </section>
 
