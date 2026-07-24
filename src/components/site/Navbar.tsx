@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, Flame } from "lucide-react";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/taksan-logo.png";
 
 const links = [
   { to: "/", key: "nav.home" },
@@ -22,9 +23,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-lg gradient-brand text-white shadow-md">
-            <Flame className="h-5 w-5" />
-          </span>
+          <img src={logoAsset} alt="Taksan Energy Logo" className="h-9 w-auto object-contain" />
           <span className="font-display text-lg font-bold tracking-tight text-brand">
             TAKSAN <span className="text-energy">ENERGY</span>
           </span>
