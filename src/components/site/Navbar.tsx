@@ -23,7 +23,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setOpen(false)}>
-          <img src={logoAsset} alt="Taksan Energy Logo" className="h-9 w-auto object-contain" />
+          <img src={logoAsset} alt="Taksan Energy Logo" className="h-10 w-10 object-contain" />
           <span className="font-display text-lg font-bold tracking-tight text-brand">
             TAKSAN <span className="text-energy">ENERGY</span>
           </span>

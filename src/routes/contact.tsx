@@ -32,22 +32,48 @@ function ContactPage() {
   const { t } = useI18n();
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const data = Object.fromEntries(form.entries());
-    const parsed = schema.safeParse(data);
-    if (!parsed.success) {
-      toast.error("Please check your inputs.");
-      return;
-    }
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const formEl = e.currentTarget;  // save reference before async
+  const form = new FormData(formEl);
+  const data = Object.fromEntries(form.entries());
+
+  const parsed = schema.safeParse(data);
+  if (!parsed.success) {
+    toast.error("Please check your inputs.");
+    return;
+  }
+
+  form.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+  form.append("subject", "New Contact Form Submission - Taksan Energy");
+  form.append("botcheck", "");
+
+  setSubmitting(true);
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: form,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
       toast.success(t("form.sent"));
-      (e.target as HTMLFormElement).reset();
-    }, 700);
-  };
+      formEl.reset();  // use saved reference here
+    } else {
+      toast.error("Failed to send message.");
+    }
+  } catch (error) {
+    toast.error("Network error. Please try again.");
+  } finally {
+    setSubmitting(false);
+  }
+};
+
+
+  
 
   return (
     <SiteLayout>
@@ -55,6 +81,7 @@ function ContactPage() {
 
       <section className="container-x py-16 grid gap-10 lg:grid-cols-5">
         <form onSubmit={onSubmit} className="lg:col-span-3 rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm space-y-4">
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
           <div className="grid sm:grid-cols-2 gap-4">
             <Field name="name" label={t("form.name")} required />
             <Field name="company" label={t("form.company")} />
@@ -77,9 +104,9 @@ function ContactPage() {
           <div className="rounded-2xl gradient-brand p-6 text-white">
             <h3 className="text-lg font-bold">{t("contact.info")}</h3>
             <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5" /> +254 741 229 960</li>
-              <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5" /> info@taksanenergy.com</li>
-              <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5" /> Head Office: Nairobi, Kenya</li>
+              <li className="flex items-start gap-3"><Phone className="h-4 w-4 mt-0.5" /> +243 853 451 915</li>
+              <li className="flex items-start gap-3"><Mail className="h-4 w-4 mt-0.5" /> TAKSAN2019@gmail.com</li>
+              <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5" /> No. 1 , Avenue: Baiyi, Rond point Kasavubu</li>
             </ul>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
@@ -93,7 +120,7 @@ function ContactPage() {
         </aside>
       </section>
 
-      <section className="container-x pb-20">
+      {/* <section className="container-x pb-20">
         <div className="overflow-hidden rounded-2xl border border-border shadow">
           <iframe
             title="Regions we serve"
@@ -102,7 +129,7 @@ function ContactPage() {
             loading="lazy"
           />
         </div>
-      </section>
+      </section> */}
     </SiteLayout>
   );
 }

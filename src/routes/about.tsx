@@ -3,6 +3,7 @@ import { ShieldCheck, HeartHandshake, Sparkles, Award, Lightbulb, Users, Leaf } 
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
 import { useI18n } from "@/lib/i18n";
 import refineryImg from "@/assets/refinery.jpg";
+import stationImg from "@/assets/taksan-station.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -32,11 +33,29 @@ function AboutPage() {
     <SiteLayout>
       <PageHeader eyebrow="About" title={t("about.title")} sub={t("about.overview")} />
 
-      <section className="container-x py-20 grid md:grid-cols-2 gap-10">
+      {/* <div className="w-full overflow-hidden">
+        <img
+          src={stationImg}
+          alt="Taksan T.C. Station"
+          className="w-full h-full object-cover object-bottom"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-deep/30 to-transparent" />
+      </div> */}
+
+      <section className="container-x py-20 grid md:grid-cols-3 gap-6 items-stretch">
         <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
           <div className="grid h-12 w-12 place-items-center rounded-xl gradient-brand text-white"><Sparkles className="h-6 w-6" /></div>
           <h2 className="mt-5 text-2xl font-bold text-brand">{t("about.mission.t")}</h2>
           <p className="mt-3 text-muted-foreground leading-relaxed">{t("about.mission.d")}</p>
+        </div>
+        <div className="rounded-2xl overflow-hidden shadow-sm">
+          <img
+            src={stationImg}
+            alt="Taksan T.C. Station"
+            className="w-full h-full object-cover object-center min-h-[280px]"
+            loading="lazy"
+          />
         </div>
         <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
           <div className="grid h-12 w-12 place-items-center rounded-xl bg-energy text-black"><Users className="h-6 w-6" /></div>
