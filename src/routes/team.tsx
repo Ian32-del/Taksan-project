@@ -15,12 +15,12 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "James Mwangi", role: "Chief Executive Officer", bio: "Two decades of leadership in African energy and cross-border logistics." },
-  { name: "Aline Kabila", role: "Chief Operations Officer", bio: "Directs regional operations across Kenya, DRC and Mozambique." },
-  { name: "Samuel Otieno", role: "Head of Logistics", bio: "Oversees fleet operations, safety and on-time delivery performance." },
-  { name: "Fatima N'Doumbé", role: "Head of Customer Relations", bio: "Builds long-term partnerships with our commercial and institutional clients." },
-  { name: "David Kimani", role: "Head of Quality & Safety", bio: "Ensures every product meets our uncompromising quality standards." },
-  { name: "Isabelle Manuel", role: "Country Manager — Mozambique", bio: "Leads our operations and business development in Mozambique." },
+  { name: "Abdirashid Irshet Sheikh", role: "Chief Executive Officer", bio: "Two decades of leadership in African energy and cross-border logistics." },
+  { name: "Bashi Abdule", role: "Executive Assistant", bio: "Directs regional operations across Kenya, DRC and Mozambique." },
+  { name: "Abdirashid Ibrahim Mohamed", role: "Manager", bio: "Oversees fleet operations, safety and on-time delivery performance." },
+  { name: "Mohamed Abdullahi", role: "Accountant", bio: "Manages financial planning, reporting, and compliance to support the company's operational and strategic objectives." },
+  // { name: "David Kimani", role: "Head of Quality & Safety", bio: "Ensures every product meets our uncompromising quality standards." },
+  // { name: "Isabelle Manuel", role: "Country Manager — Mozambique", bio: "Leads our operations and business development in Mozambique." },
 ];
 
 const palette = [
