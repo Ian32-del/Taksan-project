@@ -6,6 +6,8 @@ import lpgImg from "@/assets/lpg-facility.jpg";
 import refineryImg from "@/assets/refinery.jpg";
 import truckImg from "@/assets/tanker-truck.jpg";
 import heroImg from "@/assets/hero-terminal.jpg";
+import stationBrandImg from "@/assets/taksan-brand.jpeg";
+
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -124,7 +126,29 @@ function ProductsPage() {
   const { t, lang } = useI18n();
   return (
     <SiteLayout>
-      <PageHeader eyebrow="Products" title={t("products.title")} sub={t("products.sub")} />
+      <section className="relative overflow-hidden">
+        <img
+          src={stationBrandImg}
+          alt="Taksan T.C. Station at night"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{
+            animation: "zoomOut 8s ease-out forwards",
+          }}
+          loading="lazy"
+        />
+        <style>{`
+          @keyframes zoomOut {
+            from { transform: scale(1.1); }
+            to   { transform: scale(1); }
+          }
+        `}</style>
+        <div className="absolute inset-0 bg-brand-deep/75" />
+        <div className="relative container-x py-24 md:py-32">
+          <p className="text-sm font-semibold uppercase tracking-widest text-energy">Services</p>
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">{t("services.title")}</h1>
+          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">{t("services.sub")}</p>
+        </div>
+      </section>
 
       <div className="container-x py-16 space-y-16">
         {products.map((p, idx) => {

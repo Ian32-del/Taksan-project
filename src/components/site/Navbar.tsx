@@ -37,7 +37,7 @@ export function Navbar() {
               activeOptions={{ exact: l.to === "/" }}
               activeProps={{ className: "text-brand bg-secondary" }}
               inactiveProps={{ className: "text-foreground/70 hover:text-brand hover:bg-secondary/60" }}
-              className="rounded-md px-3 py-2 text-sm font-medium transition-colors"
+              className="rounded-md px-3 py-2 text-sm font-medium transition-colors uppercase "
             >
               {t(l.key)}
             </Link>
@@ -67,7 +67,7 @@ export function Navbar() {
                 activeOptions={{ exact: l.to === "/" }}
                 activeProps={{ className: "text-brand" }}
                 inactiveProps={{ className: "text-foreground/80" }}
-                className="py-2.5 text-sm font-medium"
+                className="py-2.5 text-sm font-medium uppercase"
               >
                 {t(l.key)}
               </Link>

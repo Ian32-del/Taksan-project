@@ -3,6 +3,7 @@ import { Truck, ShieldCheck, MapPin, Clock, Route as RouteIcon, Users, Globe2, C
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
 import { useI18n } from "@/lib/i18n";
 import truckImg from "@/assets/tanker-truck.jpg";
+import stationNightImg from "@/assets/station-night.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -31,7 +32,31 @@ function ServicesPage() {
   const { t } = useI18n();
   return (
     <SiteLayout>
-      <PageHeader eyebrow="Services" title={t("services.title")} sub={t("services.sub")} />
+      <section className="relative overflow-hidden">
+        <img
+          src={stationNightImg}
+          alt="Taksan T.C. Station at night"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{
+            animation: "zoomOut 8s ease-out forwards",
+          }}
+          loading="lazy"
+        />
+        <style>{`
+          @keyframes zoomOut {
+            from { transform: scale(1.1); }
+            to   { transform: scale(1); }
+          }
+        `}</style>
+        <div className="absolute inset-0 bg-brand-deep/75" />
+        <div className="relative container-x py-24 md:py-32">
+          <p className="text-sm font-semibold uppercase tracking-widest text-energy">Services</p>
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">{t("services.title")}</h1>
+          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">{t("services.sub")}</p>
+        </div>
+      </section>
+
+      
 
       <section className="container-x py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>

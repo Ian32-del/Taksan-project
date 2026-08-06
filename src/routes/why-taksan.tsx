@@ -56,7 +56,7 @@ function WhyPage() {
           </div>
 
           <div className="rounded-2xl border border-white/15 bg-white/5 p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:bg-white/10 hover:border-energy hover:shadow-2xl">
-            <StatWhite value={3} label={t("stats.countries")} />
+            <StatWhite value={2} label={t("stats.countries")} />
           </div>
 
           <div className="rounded-2xl border border-white/15 bg-white/5 p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:bg-white/10 hover:border-energy hover:shadow-2xl">

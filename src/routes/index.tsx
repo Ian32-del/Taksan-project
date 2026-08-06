@@ -5,6 +5,9 @@ import truckImg from "@/assets/tanker-truck.jpg";
 import { SiteLayout } from "@/components/site/Layout";
 import { AnimatedStat } from "@/components/site/Stat";
 import { useI18n } from "@/lib/i18n";
+import petrolImg from "@/assets/petrol.jpeg";
+import petrolImg2 from "@/assets/petrol2.jpeg";
+import petrolImg3 from "@/assets/petrol3.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,13 +20,13 @@ function Index() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Taksan Energy terminal at sunrise" className="h-full w-full object-cover" width={1920} height={1080} />
+          <img src={petrolImg3} alt="Taksan Energy terminal at sunrise" className="h-full w-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-deep/95 via-brand-deep/85 to-brand-deep/50" />
         </div>
         <div className="container-x relative py-24 md:py-36 text-white">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1 text-xs font-medium uppercase tracking-widest text-energy">
             <span className="h-1.5 w-1.5 rounded-full bg-energy animate-pulse" />
-            Kenya · DRC · Mozambique
+            Kenya · DRC 
           </p>
           <h1 className="mt-6 max-w-4xl text-4xl md:text-6xl font-bold leading-[1.05] animate-fade-in">
             {t("hero.title")}
@@ -49,7 +52,7 @@ function Index() {
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">
-            <AnimatedStat value={3} label={t("stats.countries")} />
+            <AnimatedStat value={2} label={t("stats.countries")} />
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-8 shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:border-brand">

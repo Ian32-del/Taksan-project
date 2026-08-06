@@ -15,7 +15,7 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Abdirashid Irshet Sheikh", role: "Chief Executive Officer", bio: "Two decades of leadership in African energy and cross-border logistics." },
+  { name: "Abdullahi Irshet Sheikh", role: "Chief Executive Officer", bio: "Two decades of leadership in African energy and cross-border logistics." },
   { name: "Bashi Abdule", role: "Executive Assistant", bio: "Directs regional operations across Kenya, DRC and Mozambique." },
   { name: "Abdirashid Ibrahim Mohamed", role: "Manager", bio: "Oversees fleet operations, safety and on-time delivery performance." },
   { name: "Mohamed Abdullahi", role: "Accountant", bio: "Manages financial planning, reporting, and compliance to support the company's operational and strategic objectives." },
@@ -38,7 +38,7 @@ function TeamPage() {
     <SiteLayout>
       <PageHeader eyebrow="Team" title={t("team.title")} sub={t("team.sub")} />
 
-      <section className="container-x py-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="container-x py-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {team.map((m, i) => {
           const initials = m.name.split(" ").map((s) => s[0]).slice(0, 2).join("");
           return (
