@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
 import { useI18n } from "@/lib/i18n";
+import newTeam from "@/assets/team.jpeg";
+import { UserCircle2 } from "lucide-react";
+
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -36,18 +39,44 @@ function TeamPage() {
   const { t } = useI18n();
   return (
     <SiteLayout>
-      <PageHeader eyebrow="Team" title={t("team.title")} sub={t("team.sub")} />
+      <section className="relative overflow-hidden">
+        <img
+          src={newTeam}
+          alt="Taksan T.C. Station at night"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{
+            animation: "zoomOut 8s ease-out forwards",
+          }}
+          loading="lazy"
+        />
+        <style>{`
+          @keyframes zoomOut {
+            from { transform: scale(1.1); }
+            to   { transform: scale(1); }
+          }
+        `}</style>
+        <div className="absolute inset-0 bg-brand-deep/75" />
+        <div className="relative container-x py-24 md:py-32">
+          <p className="text-sm font-semibold uppercase tracking-widest text-energy">Team</p>
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">{t("team.title")}</h1>
+          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">{t("team.sub")}</p>
+        </div>
+      </section>
 
       <section className="container-x py-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {team.map((m, i) => {
           const initials = m.name.split(" ").map((s) => s[0]).slice(0, 2).join("");
           return (
             <div key={m.name} className="group rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
-              <div className={`h-48 bg-gradient-to-br ${palette[i % palette.length]} grid place-items-center text-white`}>
-                <span className="font-display text-5xl font-bold drop-shadow">{initials}</span>
+              <div className="h-48 bg-gray-100 grid place-items-center">
+                <svg viewBox="0 0 100 100" className="h-32 w-32 rounded-full" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="50" fill="#d1d5db"/>
+                  <circle cx="50" cy="38" r="18" fill="#9ca3af"/>
+                  <ellipse cx="50" cy="85" rx="28" ry="22" fill="#9ca3af"/>
+                </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold">{m.name}</h3>
+                <h3 className="text-lg font-bold italic">{m.name}</h3>
                 <p className="text-sm font-medium text-energy">{m.role}</p>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
               </div>

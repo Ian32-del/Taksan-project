@@ -144,9 +144,9 @@ function ProductsPage() {
         `}</style>
         <div className="absolute inset-0 bg-brand-deep/75" />
         <div className="relative container-x py-24 md:py-32">
-          <p className="text-sm font-semibold uppercase tracking-widest text-energy">Services</p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">{t("services.title")}</h1>
-          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">{t("services.sub")}</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-energy">Products</p>
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">{t("products.title")}</h1>
+          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">{t("products.sub")}</p>
         </div>
       </section>
 

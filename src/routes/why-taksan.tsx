@@ -3,6 +3,8 @@ import { Award, ShieldCheck, Globe2, BadgeCheck, Truck, HeartHandshake } from "l
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
 import { AnimatedStat } from "@/components/site/Stat";
 import { useI18n } from "@/lib/i18n";
+import newStation from "@/assets/new-station.jpeg";
+
 
 export const Route = createFileRoute("/why-taksan")({
   head: () => ({
@@ -31,11 +33,42 @@ function WhyPage() {
   
   return (
     <SiteLayout>
-      <PageHeader
-        eyebrow={t("nav.why")}
-        title={t("why.title")}
-        sub={t("why.sub")}
-      />
+      <section className="relative overflow-hidden">
+        <img
+          src={newStation}
+          alt="Taksan T.C. Station at night"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{
+            animation: "zoomOut 8s ease-out forwards",
+          }}
+          loading="lazy"
+        />
+
+        <style>{`
+          @keyframes zoomOut {
+            from { transform: scale(1.1); }
+            to   { transform: scale(1); }
+          }
+        `}</style>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-brand-deep/75" />
+
+        {/* Hero content */}
+        <div className="relative container-x py-24 md:py-32">
+          <p className="text-sm font-semibold uppercase tracking-widest text-energy">
+            Why Taksan
+          </p>
+
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white max-w-2xl">
+            {t("why.title")}
+          </h1>
+
+          <p className="mt-4 text-white/80 max-w-xl leading-relaxed">
+            {t("why.sub")}
+          </p>
+        </div>
+      </section>
       <section className="container-x py-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {reasonKeys.map(({ i: Icon, tKey }) => (
           <div key={tKey} className="group rounded-2xl border border-border bg-card p-7 hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl transition">
