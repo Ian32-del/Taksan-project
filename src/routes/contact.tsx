@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Taksan Energy Limited" },
-      { name: "description", content: "Contact Taksan Energy Limited for petroleum supply and transportation across Kenya, DRC and Mozambique." },
+      { name: "description", content: "Contact Taksan Energy Limited for petroleum supply and transportation across Kenya and DRC." },
       { property: "og:title", content: "Contact Taksan Energy" },
       { property: "og:description", content: "Get in touch about reliable petroleum supply and logistics." },
     ],
@@ -114,7 +114,6 @@ function ContactPage() {
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>🇰🇪 Kenya</li>
               <li>🇨🇩 Democratic Republic of Congo</li>
-              <li>🇲🇿 Mozambique</li>
             </ul>
           </div>
         </aside>

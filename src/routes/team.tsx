@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
 import { useI18n } from "@/lib/i18n";
-import newTeam from "@/assets/team.jpeg";
+import newTeam from "@/assets/teamImage.jpeg";
 import { UserCircle2 } from "lucide-react";
 
 

@@ -15,11 +15,11 @@ export function Footer() {
             <span className="font-display text-lg font-bold">TAKSAN ENERGY</span>
           </div>
           <p className="mt-4 text-sm text-white/70">{t("footer.tagline")}</p>
-          <div className="mt-5 flex gap-3 text-white/70">
+          {/* <div className="mt-5 flex gap-3 text-white/70">
             <a href="#" aria-label="LinkedIn" className="hover:text-energy"><Linkedin className="h-5 w-5" /></a>
             <a href="#" aria-label="Facebook" className="hover:text-energy"><Facebook className="h-5 w-5" /></a>
             <a href="#" aria-label="Twitter" className="hover:text-energy"><Twitter className="h-5 w-5" /></a>
-          </div>
+          </div> */}
         </div>
 
         <div>
@@ -54,7 +54,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col md:flex-row items-center justify-between gap-2 py-5 text-xs text-white/60">
-          <p>© 2026 Taksan Energy Limited. {t("footer.rights")}</p>
+          <p>© 2026 Taksan Energy Limited . {t("footer.rights")}</p>
           <p>{t("footer.tagline")}</p>
         </div>
       </div>

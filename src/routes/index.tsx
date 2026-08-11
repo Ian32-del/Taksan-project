@@ -97,11 +97,10 @@ function Index() {
       <section className="bg-brand-deep text-white">
         <div className="container-x grid md:grid-cols-2 gap-10 py-20 items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-energy">Logistics</p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold">Petroleum transportation you can trust</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-energy">{t("home.logistics.eyebrow")}</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold">{t("home.logistics.title")}</h2>
             <p className="mt-4 text-white/80">
-              A modern fleet of fuel tankers, professional drivers and cross-border expertise — delivering
-              petroleum products safely and on time across East and Central Africa.
+              {t("home.logistics.description")}
             </p>
             <Link to="/services" className="mt-8 inline-flex items-center gap-2 rounded-full bg-energy px-6 py-3 text-sm font-semibold text-black hover:-translate-y-0.5 transition-transform">
               {t("cta.learnMore")} <ArrowRight className="h-4 w-4" />
@@ -116,8 +115,8 @@ function Index() {
 
       {/* CTA */}
       <section className="container-x py-20 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">Ready to fuel your operations?</h2>
-        <p className="mt-3 text-muted-foreground">Talk to our team about reliable supply across Kenya, DRC and Mozambique.</p>
+        <h2 className="text-3xl md:text-4xl font-bold">{t("cta.ready")}</h2>
+        <p className="mt-3 text-muted-foreground">{t("cta.readySub")}</p>
         <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white hover:opacity-90">
           {t("cta.contact")} <ArrowRight className="h-4 w-4" />
         </Link>

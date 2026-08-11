@@ -17,7 +17,7 @@ const en: Dict = {
   "cta.learnMore": "Learn More",
 
   "hero.title": "Taksan Energy Limited – Reliable Petroleum Solutions Across Africa",
-  "hero.sub": "With over 15 years of experience, Taksan Energy delivers premium petroleum products and dependable energy solutions across Kenya, the Democratic Republic of Congo, and Mozambique.",
+  "hero.sub": "With over 15 years of experience, Taksan Energy delivers premium petroleum products and dependable energy solutions across Kenya and the Democratic Republic of Congo.",
 
   "stats.years": "Years Experience",
   "stats.countries": "Countries of Operation",
@@ -37,14 +37,14 @@ const en: Dict = {
   "why.4.t": "Professional Transportation",
   "why.4.d": "A modern fleet operated by trained, safety-first drivers.",
   "why.5.t": "Cross-Border Operations",
-  "why.5.d": "Seamless logistics across Kenya, DRC and Mozambique.",
+  "why.5.d": "Seamless logistics across Kenya and DRC .",
   "why.6.t": "Customer-Centered Service",
   "why.6.d": "Long-term partnerships built on trust and responsiveness.",
 
   "about.title": "About Taksan Energy",
   "about.overview": "Taksan Energy Limited has built a reputation for excellence through more than 15 years of providing dependable petroleum products and energy solutions throughout East and Central Africa. The company supports economic growth by ensuring businesses and communities have access to reliable fuel and energy resources through efficient supply chains and professional service delivery.",
   "about.mission.t": "Our Mission",
-  "about.mission.d": "To provide efficient and reliable energy solutions across Kenya, the Democratic Republic of Congo, and Mozambique while meeting the diverse needs of our clients through quality products, safety, innovation, and exceptional service.",
+  "about.mission.d": "To provide efficient and reliable energy solutions across Kenya and the Democratic Republic of Congo while meeting the diverse needs of our clients through quality products, safety, innovation, and exceptional service.",
   "about.vision.t": "Our Vision",
   "about.vision.d": "To become one of Africa's most trusted and preferred petroleum and energy solution providers.",
   "about.values.t": "Core Values",
@@ -65,7 +65,7 @@ const en: Dict = {
 
   "services.title": "Our Services",
   "services.sub": "Professional petroleum transportation across the region.",
-  "services.overview": "Taksan Energy Limited provides professional truck transportation services that ensure petroleum products are delivered safely, efficiently, and on time. The company operates with a strong commitment to safety, reliability, and operational excellence across Kenya, the Democratic Republic of Congo, and Mozambique.",
+  "services.overview": "Taksan Energy Limited provides professional truck transportation services that ensure petroleum products are delivered safely, efficiently, and on time. The company operates with a strong commitment to safety, reliability, and operational excellence across Kenya and the Democratic Republic of Congo.",
   "services.features": "Service Features",
 
   "team.title": "Our Team",
@@ -84,6 +84,13 @@ const en: Dict = {
   "form.sent": "Thank you — we will be in touch shortly.",
   "contact.info": "Contact Information",
   "contact.countries": "Countries Served",
+
+  "cta.ready": "Ready to fuel your operations?",
+  "cta.readySub": "Talk to our team about reliable supply across Kenya and DRC.",
+
+  "home.logistics.eyebrow": "Logistics",
+  "home.logistics.title": "Petroleum transportation you can trust",
+  "home.logistics.description": "A modern fleet of fuel tankers, professional drivers and cross-border expertise — delivering petroleum products safely and on time across East and Central Africa.",
 
   "footer.tagline": "Powering Africa Through Reliable Energy Solutions.",
   "footer.quick": "Quick Links",
@@ -106,7 +113,7 @@ const fr: Dict = {
   "cta.learnMore": "En savoir plus",
 
   "hero.title": "Taksan Energy Limited – Solutions pétrolières fiables à travers l'Afrique",
-  "hero.sub": "Avec plus de 15 ans d'expérience, Taksan Energy fournit des produits pétroliers de qualité et des solutions énergétiques fiables au Kenya, en République Démocratique du Congo et au Mozambique.",
+  "hero.sub": "Avec plus de 15 ans d'expérience, Taksan Energy fournit des produits pétroliers de qualité et des solutions énergétiques fiables au Kenya et en République Démocratique du Congo.",
 
   "stats.years": "Années d'expérience",
   "stats.countries": "Pays d'opération",
@@ -126,15 +133,14 @@ const fr: Dict = {
   "why.4.t": "Transport professionnel",
   "why.4.d": "Flotte moderne et conducteurs qualifiés priorisant la sécurité.",
   "why.5.t": "Opérations transfrontalières",
-  "why.5.d": "Logistique fluide au Kenya, en RDC et au Mozambique.",
+  "why.5.d": "Logistique fluide au Kenya et en RDC.",
   "why.6.t": "Service centré client",
   "why.6.d": "Partenariats durables fondés sur la confiance et la réactivité.",
 
   "about.title": "À propos de Taksan Energy",
   "about.overview": "Taksan Energy Limited s'est forgé une réputation d'excellence grâce à plus de 15 ans de fourniture de produits pétroliers fiables et de solutions énergétiques en Afrique de l'Est et Centrale. L'entreprise soutient la croissance économique en garantissant aux entreprises et aux communautés l'accès à des ressources énergétiques fiables.",
   "about.mission.t": "Notre Mission",
-  "about.mission.d": "Fournir des solutions énergétiques efficaces et fiables au Kenya, en République Démocratique du Congo et au Mozambique tout en répondant aux besoins variés de nos clients par la qualité, la sécurité, l'innovation et un service exceptionnel.",
-  "about.vision.t": "Notre Vision",
+  "about.mission.d": "Fournir des solutions énergétiques efficaces et fiables au Kenya et en République Démocratique du Congo tout en répondant aux besoins variés de nos clients par la qualité, la sécurité, l'innovation et un service exceptionnel.",  "about.vision.t": "Notre Vision",
   "about.vision.d": "Devenir l'un des fournisseurs pétroliers et énergétiques les plus fiables et préférés d'Afrique.",
   "about.values.t": "Valeurs fondamentales",
   "values.integrity": "Intégrité",
@@ -154,8 +160,7 @@ const fr: Dict = {
 
   "services.title": "Nos Services",
   "services.sub": "Transport pétrolier professionnel dans toute la région.",
-  "services.overview": "Taksan Energy Limited propose des services de transport par camion qui garantissent une livraison sûre, efficace et ponctuelle des produits pétroliers. L'entreprise opère avec un engagement fort envers la sécurité, la fiabilité et l'excellence opérationnelle au Kenya, en RDC et au Mozambique.",
-  "services.features": "Caractéristiques du service",
+  "services.overview": "Taksan Energy Limited propose des services de transport par camion qui garantissent une livraison sûre, efficace et ponctuelle des produits pétroliers. L'entreprise opère avec un engagement fort envers la sécurité, la fiabilité et l'excellence opérationnelle au Kenya et en RDC.",  "services.features": "Caractéristiques du service",
 
   "team.title": "Notre Équipe",
   "team.sub": "La direction derrière Taksan Energy Limited.",
@@ -173,6 +178,13 @@ const fr: Dict = {
   "form.sent": "Merci — nous vous recontacterons rapidement.",
   "contact.info": "Coordonnées",
   "contact.countries": "Pays desservis",
+
+  "cta.ready": "Prêt à alimenter vos opérations ?",
+  "cta.readySub": "Parlez à notre équipe pour un approvisionnement fiable au Kenya et en RDC.",
+
+  "home.logistics.eyebrow": "Logistique",
+  "home.logistics.title": "Un transport pétrolier sur lequel vous pouvez compter",
+  "home.logistics.description": "Une flotte moderne de camions-citernes, des chauffeurs professionnels et une expertise transfrontalière pour livrer les produits pétroliers en toute sécurité et dans les délais au Kenya et en RDC.",
 
   "footer.tagline": "Alimenter l'Afrique par des solutions énergétiques fiables.",
   "footer.quick": "Liens rapides",
